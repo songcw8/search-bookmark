@@ -16,6 +16,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.UUID;
+
 import org.springframework.stereotype.Component;
 
 @Component
@@ -25,7 +27,8 @@ public class NaverSearchAPI implements DotenvMixin, ObjectMapperMixin{
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
     public List<KeywordSearch> callAPI(NaverSearchParam param) throws Exception {
-        String url = "https://openapi.naver.com/v1/search/blog.json";
+        //String url = "https://openapi.naver.com/v1/search/blog.json";
+        String url = "https://openapi.naver.com/v1/search/news.json";
         String query = URLEncoder.encode(param.query(), StandardCharsets.UTF_8);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("%s?query=%s".formatted(url, query))) // URL로부 호출을 시도할 URI 생성
@@ -37,7 +40,8 @@ public class NaverSearchAPI implements DotenvMixin, ObjectMapperMixin{
         //logger.info(responseBody);
         NaverSearchResult naverSearchResult = objectMapper.readValue(responseBody, NaverSearchResult.class);
         return naverSearchResult.items().stream().map(item -> new KeywordSearch(
-                "",
+                //"",
+                UUID.randomUUID().toString(),
                 item.title(),
                 item.link(),
                 item.description(),
