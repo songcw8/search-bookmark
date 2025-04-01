@@ -27,8 +27,8 @@ public class NaverSearchAPI implements DotenvMixin, ObjectMapperMixin{
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
     public List<KeywordSearch> callAPI(NaverSearchParam param) throws Exception {
-        //String url = "https://openapi.naver.com/v1/search/blog.json";
-        String url = "https://openapi.naver.com/v1/search/news.json";
+        String url = "https://openapi.naver.com/v1/search/blog.json";
+        //String url = "https://openapi.naver.com/v1/search/news.json";
         String query = URLEncoder.encode(param.query(), StandardCharsets.UTF_8);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("%s?query=%s".formatted(url, query))) // URL로부 호출을 시도할 URI 생성
