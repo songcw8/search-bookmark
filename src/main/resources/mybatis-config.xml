@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <environments default="development">
         <environment id="development">
@@ -16,7 +16,6 @@
     </environments>
     <mappers>
         <!-- resources 를 기준으로 해서 어느 경로에 있는지... -->
-        <mapper resource="mappers/TestMapper.xml"/>
-        <mapper resource="mappers/AnimeMapper.xml"/>
+        <mapper resource="mappers/BookmarkMapper.xml"/>
     </mappers>
 </configuration>

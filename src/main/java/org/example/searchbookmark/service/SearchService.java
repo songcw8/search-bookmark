@@ -7,5 +7,5 @@ import java.util.List;
 
 // Spring Container에 Component로 등록
 public interface SearchService {
-    List<KeywordSearch>searchByKeyWord(String keyWord) throws Exception;
+    List<KeywordSearch>searchByKeyword(String keyWord) throws Exception;
 }

@@ -18,7 +18,7 @@ public class NaverSearchService implements SearchService {
     }
 
     @Override
-    public List<KeywordSearch> searchByKeyWord(String keyWord) throws Exception {
+    public List<KeywordSearch> searchByKeyword(String keyWord) throws Exception {
         //naverSearchAPI.callAPI(new NaverSearchParam(keyWord));
         logger.info("searchByKeyword keyword: %s".formatted(keyWord));
         return naverSearchAPI.callAPI(new NaverSearchParam(keyWord));
