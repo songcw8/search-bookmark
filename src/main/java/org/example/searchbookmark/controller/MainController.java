@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
     private final SearchService searchService;
 
-    // 생성자 주입
-    @Autowired
+    // 생성자 주입 -> 의존성 주입을
     public MainController(SearchService searchService) {
         this.searchService = searchService;
     }
