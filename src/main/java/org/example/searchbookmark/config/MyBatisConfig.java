@@ -1,4 +1,4 @@
-package org.example.mealisallyouneed.config;
+package org.example.searchbookmark.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import org.apache.ibatis.session.SqlSessionFactory;

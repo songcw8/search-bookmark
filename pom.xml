@@ -54,6 +54,12 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.19</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -69,6 +75,7 @@
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>.env</include>
+                    <include>**/*.xml</include>
                 </includes>
             </resource>
         </resources>

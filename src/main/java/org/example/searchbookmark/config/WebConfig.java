@@ -1,4 +1,4 @@
-package org.example.mealisallyouneed.config;
+package org.example.searchbookmark.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
